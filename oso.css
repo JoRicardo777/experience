@@ -1,4 +1,12 @@
 :root { 
-    --brown-dark-bear: rgb(128, 66, 16);
-    --brown-light-bear: rgb(197, 91, 49); 
+    --brown-dark-bear: rgb(198, 141, 109);
+    --brown-light-bear: rgb(221, 159, 128); 
+    --yellow-bear: rgb(255, 218, 170); 
+    --inner-bear: rgb(255, 196, 119);
+    --nose-bear: rgb(147, 91, 69);
+    --eyes-bear: rgb(87, 86, 92);
+    --sky-bear: rgb(159, 246, 255);
+    --sky-dark-bear: rgb(125, 232, 255);
+    --sky-ligth-bear: rgb(204, 248, 255);
+    
 }
