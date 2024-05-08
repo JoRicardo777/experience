@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Urso Fumando</title>
+<style>
+    body {
+        background-color: #87CEEB; /* Azul claro */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .bear {
+        width: 300px;
+        height: 300px;
+        position: relative;
+    }
+
+    .head {
+        width: 200px;
+        height: 200px;
+        background-color: #A0522D; /* Marrom */
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nose {
+        width: 30px;
+        height: 30px;
+        background-color: #000;
+        border-radius: 50%;
+        position: absolute;
+        top: 85px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .left-eye, .right-eye {
+        width: 40px;
+        height: 40px;
+        background-color: #fff; /* Branco */
+        border-radius: 50%;
+        position: absolute;
+        top: 50px;
+    }
+
+    .left-eye {
+        left: 35%;
+    }
+
+    .right-eye {
+        right: 35%;
+    }
+
+    .left-ear, .right-ear {
+        width: 60px;
+        height: 60px;
+        background-color: #A0522D; /* Marrom */
+        border-radius: 50%;
+        position: absolute;
+        top: -15px;
+    }
+
+    .left-ear {
+        left: -20px;
+    }
+
+    .right-ear {
+        right: -20px;
+    }
+
+    .body {
+        width: 250px;
+        height: 250px;
+        background-color: #A0522D; /* Marrom */
+        border-radius: 50%;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .cigar {
+        width: 100px;
+        height: 20px;
+        background-color: #bcbcbc; /* Cinza */
+        position: absolute;
+        top: 140px;
+        left: 45%;
+        transform: rotate(45deg);
+    }
+
+    .smoke {
+        width: 20px;
+        height: 20px;
+        background-color: #ccc;
+        border-radius: 50%;
+        position: absolute;
+        top: 120px;
+        left: 56%;
+        opacity: 0.7;
+        animation: smoke 3s infinite alternate;
+    }
+
+    @keyframes smoke {
+        0% {
+            opacity: 0;
+            transform: translateY(0);
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="bear">
+        <div class="head">
+            <div class="nose"></div>
+            <div class="left-eye"></div>
+            <div class="right-eye"></div>
+            <div class="left-ear"></div>
+            <div class="right-ear"></div>
+        </div>
+        <div class="body"></div>
+        <div class="cigar"></div>
+        <div class="smoke"></div>
+    </div>
+</div>
+</body>
+</html>

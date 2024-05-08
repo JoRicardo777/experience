@@ -1,6 +1,7 @@
 :root { 
     --brown-dark-bear: rgb(198, 141, 109);
-    --brown-light-bear: rgb(221, 159, 128); 
+    --brown-light-bear: rgb(221, 159, 128);
+    --brown-mid-bear: rgb(214, 146, 113); 
     --yellow-bear: rgb(255, 218, 170); 
     --inner-bear: rgb(255, 196, 119);
     --nose-bear: rgb(147, 91, 69);
@@ -10,7 +11,13 @@
     --sky-ligth-bear: rgb(204, 248, 255);
     
 }
-
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li{
+    color: transparent;
+}
 body {
     display: flex;
     align-items: center;
@@ -23,6 +30,7 @@ body {
     height: 100%;
     border-radius: 50%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: rgb(253, 249, 206);
@@ -32,7 +40,9 @@ body {
     border-radius: 50%;
     width: 232px;
     height: 200px;
-    position: relative;
+    position: absolute;
+    top: 28%;
+    align-items: center;
 }
 .head-copy {
     width: 100%;
@@ -124,17 +134,14 @@ body {
     background-color: var(--sky-bear);
     position: absolute;
 }
-
 .tie-layout.right {
     right: 22%;
     border-radius: 90% 30% 30% 90% / 50% 50% 50% 50%;
 }
-
 .tie-layout.left {
     border-radius: 30% 90% 90% 30% / 50% 50% 50% 50%;
     left: 22%;
 }
-
 .inner-tie {
     height: 50%;
     width: 50%;
@@ -143,11 +150,138 @@ body {
     left: 25%;
     top: 25%;
 }
-
 .inner-tie.right {
     border-radius: 90% 30% 30% 90% / 50% 50% 50% 50%;
 }
 
 .inner-tie.left {
     border-radius: 30% 90% 90% 30% / 50% 50% 50% 50%;
+}
+.body {
+    background-color: var(--brown-light-bear);
+    border-radius: 50% / 70% 70% 50% 50% ;
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    top: 41%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    z-index: 0;
+}
+.body-copy {
+    width: 100%;
+    height: 100%;
+    border-radius: 70% 70% 50% 50% / 70% 70% 50% 50%;
+    background-color: var(--brown-light-bear);
+    position: absolute;
+    z-index: 2;
+}
+.body-stomach {
+    width: 80%;
+    height: 80%;
+    background-color: var(--yellow-bear);
+    border-radius: 70% 70% 50% 50% / 70% 70% 50% 50% ;
+    z-index: 3;
+}
+.arm {
+    position: absolute;
+    height: inherit;
+    width: 102%;
+    top: 10%;
+    z-index: 1;
+}
+.arm-layout {
+    height: 100%;
+    width: 45%;
+    background-color: var(--brown-dark-bear);
+    position: absolute;
+    border-radius: 70% 70% 50% 50% / 50% 50% 30% 30%;
+}
+.arm-layout.left {
+    left: -20%;
+    transform: rotate(20deg); 
+}
+.arm-layout.right {
+    transform: rotate(-20deg); 
+    right: -20%;
+}
+.inner-arm {
+    width: 60%;
+    height: 15%;
+    background-color: var(--yellow-bear);
+    top: 82%;
+    left: 35%;
+    position: absolute;
+}
+.inner-arm.left {
+    border-radius: 70% 70% 60% 60%;
+    transform: translateX(-25%);
+}
+.inner-arm.right {
+    border-radius: 70% 70% 60% 60%;
+    transform: translateX(-25%);
+}
+.foot {
+    position: absolute;
+    width: 60%;
+    height: 50%;
+    top: 75%;
+    z-index: 4;
+}
+.foot-layout {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--brown-mid-bear);
+    border-radius: 80% 70% 70% 70% / 50% 50% 50% 50%;
+}
+.foot-layout.left {
+    left: 54%;
+    transform: rotate(-9deg);
+}
+.foot-layout.right {
+    right: 51%;
+    transform: rotate(4deg);
+}
+.inner-foot {
+    width: 60%;
+    height: 60%;
+    background-color: var(--inner-bear);
+    border-radius: 50% 50% 30% 30%;
+    top: 30%;
+    left: 20%;
+    position: absolute;
+}
+.fingers {
+    width: 70%;
+    height: 40%;
+    z-index: 5;
+    position: absolute;
+    top: 10%;
+    left: 16%;
+}
+.fingers ul {
+    display: flex;
+}
+.fingers li {
+    margin-right: 8px;
+}
+.finger.first {
+    width: 160%;
+    height: 130%;
+    background-color: var(--inner-bear);
+    border-radius: 100% 80% 40% 40%;
+}
+.finger.second {
+    width: 180%;
+    height: 160%;
+    background-color: var(--inner-bear);
+    border-radius: 80% 80% 40% 40%;
+}
+.finger.third {
+    width: 160%;
+    height: 130%;
+    border-radius: 80% 100% 40% 40%;
+    background-color: var(--inner-bear);
 }
